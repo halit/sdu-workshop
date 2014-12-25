@@ -1,0 +1,5 @@
+<ul>
+  % for pers in result:
+    <li>{{ pers.name }} (<b>{{ pers.id }}</b>)</li>
+  % end
+</ul>
