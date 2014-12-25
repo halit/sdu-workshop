@@ -1,0 +1,3 @@
+<h2> {{ result['name'] }} </h2>
+<h3> {{ result['weather'][0]['main'] }} </h3>
+<h3> {{ result['weather'][0]['description'] }} </h3>
