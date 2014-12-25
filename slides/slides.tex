@@ -1,0 +1,1104 @@
+\documentclass[10pt, compress]{beamer}
+
+\usetheme{m}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{minted}
+%\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+
+\usemintedstyle{trac}
+
+\title{Hackers for Python}
+\subtitle{}
+\date{27 Aralık 2014}
+\author{Halit Alptekin \href{mailto:info@halitalptekin.com}{( info@halitalptekin.com} )}
+\institute{Süleyman Demirel Üniversitesi Yazılım Klübü}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}[fragile]
+    \frametitle{\$ whoami}
+    \begin{description}
+        \item[EDUC] Bilgisayar mühendisliği
+        \item[WORK] Bilgi güvenliği
+        \item[IDEA] Özgür yazılım ve açık kaynak tutkunu
+        \item[MEMB] TMD, LKD, Octosec
+        \item[LIFE] GO, matematik, kriptoloji
+        \item[HOBB] A sınıfı amatör telsizci, elektronik, robotik
+    \end{description}
+\end{frame}
+
+\section{Hackers}
+
+\begin{frame}[fragile]
+    \frametitle{Hackers \& Crackers}
+    Medya'nın bize gösterdiği \textbf{Hacker} tasviri ne kadar doğru?
+    \begin{figure}[H]
+        \includegraphics[width=\textwidth]{images/hacker.jpg}
+   \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Real Hackers}
+    Bugün bilinen ilk \textbf{Hacker} kültürü 1961 yılında MIT'de ortaya çıktı. Tanım itibariyle herhangi bir şeyi amacı dışında kullanan kişilere denilir. Belirledikleri yeni amaca göre farklı isimler alabilirler.
+    \newline
+    \newline
+    \includegraphics[width=\textwidth,height=2.2in]{images/babanne.jpeg}
+\end{frame}
+
+\section{Open Source \& Free Software}
+
+\begin{frame}[fragile]
+    \frametitle{Free Software}
+    \textbf{Free Software} terimi bir yazılımın "Özgür" olduğunu belirtmek için kullanılır. Bu özgürlük içerisinde çalıştırma, kopyalama, dağıtma, inceleme, değiştirme ve geliştirme gibi kavramlar var.
+    \newline
+    \newline
+    Sosyal bir harekettir ve çeşitli lisanslar ile sağlanabilir.(GPL, BSD \ldots)
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Open Source}
+    \textbf{Open Source} terimi bir yazılımın kaynak kodlarının herkes tarafından erişilebilir olduğunu belirtmek için kullanılır. Bir yazılım açık kaynaklı olup, özgür bir yazılım olmayabilir. Ancak her özgür yazılımın kaynak kodları açık olmak durumundadır. Kodları açmak yazılımı özgür bırakmak için yeterli değildir.
+\end{frame}
+
+\plain{Close windows!}{\vspace{-4em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/close.png}\end{center}}
+
+\section{Python}
+\begin{frame}[fragile]
+    \frametitle{Nedir?}
+    \begin{wrapfigure}{r}{0.4\textwidth}
+    \vspace{-5em}
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{images/python.png}
+    \end{center}
+    \end{wrapfigure}       
+    1990 yılında Guido van Rossum tarafından geliştirilmeye başlanmıştır. İsmini \textbf{Monty Python’s Flying Circus} isimli gösteriden almıştır. Sadece bir programlama dili olmanın ötesine geçen nadir dillerdendir. Özellikle \textbf{Hacker} kültürünün \textbf{Perl}'den sonra sahiplenmesiyle ayrıcalıklı bir duruma gelmiştir.
+    
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Niye?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Okunabilir söz dizimi(syntax)
+        \item Gelişmiş kütüphane desteği
+        \item \alert<8>{\only<8>{Çok kolay}\only<3,4,5,6,7>{Kolay} öğrenme}
+        \item Aktif bir topluluk
+        \item Taşınabilir uygulamalar
+        \item Çoklu paradigma
+        \item Hızlı geliştirme
+    \end{itemize}  
+\end{frame}
+
+\plain{Uçmak mı istiyorsun?}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/pycom.png}\end{center}}
+
+\plain{Hemen bitsin mi?}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/pyo.jpg}\end{center}}
+
+\begin{frame}[fragile]
+    \frametitle{Ne yapabilirim?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Web sitesi
+        \item Oyun
+        \item Günlük araçlar
+        \item Mobil uygulama
+        \item Bilimsel çalışma \ldots
+    \end{itemize}  
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Kim kullanıyor?}
+    \begin{itemize}[<+- | alert@+>]
+        \item Google, Yahoo, NASA
+        \item Dropbox, Disqus, Mozilla
+        \item Friendfeed, Reddit, Eventbrite
+        \item Walt Disney, Battlefield 2, Civilization 4
+        \item Nokia, IBM, CIA \ldots
+    \end{itemize}  
+\end{frame}
+
+\plain{Karayip Korsanları}{\vspace{-4em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/pirates.jpg}\end{center}}
+
+\plain{Instagram}{\vspace{-4em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/instagram.jpg}\end{center}}
+
+\plain{Yok artık?}{\vspace{-4em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/nasa.jpg}\end{center}}
+
+\begin{frame}[fragile]
+\frametitle{The Zen of Python}
+    Beautiful is better than ugly.
+    
+    Explicit is better than implicit.
+    
+    Simple is better than complex.
+    
+    \ldots
+    
+    \alert{There should be one-- and preferably only one --obvious way to do it.}
+    
+    \ldots
+    
+    Namespaces are one honking great idea -- let's do more of those!
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Pythonic}
+    Python'un kendi yapıları ve veri tiplerini okunabilir, temiz bir şekilde kullanarak oluşturulan ifadelere \textbf{Pythonic} denilir.
+    
+    Herkes \textbf{Python} yazabilir ama sadece çok az kişi \textbf{Pythonic} kod yazabilir!
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{2 vs 3}
+    Şu anda \textbf{Python} ile uğraşmak isteyen birçok kişi hangi sürümü kullanması gerektiği konusunda kafaları karışık. Kafa karışıklığına gerek yok, ikisi de \textbf{Python!}
+\end{frame}
+
+
+\section{Environment}
+
+\begin{frame}[fragile]
+\frametitle{IDE}
+    \begin{description}
+        \item[Vim] python.vim, python-mode, jedi \ldots
+        \item[Emacs] auto-complete, jedi.el \ldots
+        \item[Sublime Text] anaconda, djaneiro \ldots
+        \item[PyCharm] Full Python IDE \ldots
+    \end{description}
+\end{frame}
+
+\plain{Vim}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/vim.png}\end{center}}
+
+\plain{Emacs}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/emacs.png}\end{center}}
+
+\plain{PyCharm}{\vspace{-5em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/pycharm.png}\end{center}}
+
+\begin{frame}[fragile]
+\frametitle{Pip}
+    Python'un kendi paket yöneticisi:
+      \begin{minted}[fontsize=\small]{bash}
+        apt-get install python-pip
+        yum install python-pip
+        pacman -S python2-pip (python-pip)
+      \end{minted}    
+    Temel komutları:
+    \begin{minted}[fontsize=\small]{bash}
+        pip install <paket_adi>
+        pip search <paket_adi>
+        pip uninstall <paket_adi>
+        pip install -r requirements.txt
+    \end{minted}       
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{iPython}
+    Başındaki \textbf{i} elmadan gelmiyor! İnteraktif'in kısaltması olduğu için orada duruyor.
+    \begin{minted}[fontsize=\small]{bash}
+        pip install ipython
+    \end{minted}
+    Biz yazacağız o tamamlayacak, biz isteyeceğiz o yardım edecek, biz yap diyeceğiz o yapacak. Ee o zaman bu IDE'ler ne olacak?
+    
+    Herşeyin zamanla öğrenilecek kullanılması ve kullanılmaması gereken bir yeri var. Acele yok Rocky! Parkur uzun\ldots
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Git}
+    Sürüm kontrol ve kaynak kod yönetim yazılımıdır. Biliyorum çok fazla kodun yok ama elbet bir gün olacak. Şimdiden öğrenmen lazım\ldots
+    \begin{minted}[fontsize=\small]{bash}
+        apt-get install git
+        yum install git
+        pacman -S git
+    \end{minted}
+\end{frame}
+
+\plain{Oğlum bak git!}{\vspace{-4em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/git.png}\end{center}}
+
+\begin{frame}[fragile]
+\frametitle{Basic Git}
+    Temel komutlar:
+    \begin{minted}[fontsize=\small]{bash}
+        git init
+        git add <dosya_adi>
+        git status
+        git log
+        git checkout -- <dosya_adi>
+        git branch <dal>
+        git checkout <dal>
+        git branch -D <dal>
+        git pull <repo>
+        git push <repo>
+    \end{minted}    
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Github}
+    Git depolarımızı ücretsiz olarak barındırma hizmeti sağlıyor. Bilinen birçok büyük proje aktif olarak \textbf{Github} depolarında geliştiriliyor.
+    \begin{minted}[fontsize=\small]{bash}
+        git config --global user.name "isim"
+        git config --global user.email "e-posta"
+    \end{minted}      
+    \textbf{HTTPS} kullanacaksak depoları çekerken \textbf{kullanıcı adı} ve \textbf{şifre} girmemizi ister. \textbf{SSH} kullanacaksak \textbf{SSH} keyi oluşturup \textbf{Github} içerisinde tanıtmalıyız.
+\end{frame}
+
+\plain{Github çok güzel gelsenize!}{\vspace{-2.5em}
+\begin{center}
+    \includegraphics[width=\textwidth]{images/twbs.png}
+    \newline
+    \includegraphics[width=\textwidth, height=2.6in]{images/face.png}
+\end{center}}
+
+\begin{frame}[fragile]
+\frametitle{Virtualenv}
+    Python bağımlılıkları için izole bir ortam oluşturuyor. Yüklediğiniz paketler sistemin genelini etkilemiyor. Paketlerin farklı sürümleri ile çalışma imkanı sağlıyor.
+    \begin{minted}[fontsize=\small]{bash}
+        pip install virtualenv
+    \end{minted}  
+    Temel komutlar:
+    \begin{minted}[fontsize=\small]{bash}
+        cd <klasor_adi>
+        virtualenv <sanal_ortam_adi>
+        virtualenv -p /usr/bin/python2.7 <sanal_ortam_adi>
+        source <sanal_ortam_adi>/bin/activate
+        deactivate
+    \end{minted}    
+    Birleşmenin tam zamanı!
+    \begin{minted}[fontsize=\small]{bash}
+        pip freeze > requirements.txt
+        pip install -r requirements.txt
+    \end{minted}       
+\end{frame}
+
+\section{Fundementals}
+
+\plain{Hazır mıyız?}{\vspace{-4em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/roket.jpg}\end{center}}
+
+\plain{Dahasını mı istiyorsunuz?}{\vspace{-4em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/exc.jpg}\end{center}}
+
+\begin{frame}[fragile]
+\frametitle{Hello world!}
+    Python2:
+    \begin{minted}[fontsize=\small]{python}
+        print "nbr dunya"
+        print "sn msglsn glba.s.s"
+    \end{minted} 
+    Python3:
+    \begin{minted}[fontsize=\small]{python}
+        print("nbr dunya")
+        print("sn msglsn glba.s.s")
+    \end{minted}      
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{PY Files}
+    Oluşturduğunuz her \alert{py} uzantılı dosyalar birer Python modülüdür. Ancak doğrudan çalışmasını da sağlayabilirsiniz. Bir önceki slaytta yazan satırları \alert{hello.py} olarak kaydebilirsiniz.
+    \begin{minted}[fontsize=\small]{bash}
+        python hello.py
+    \end{minted}     
+    *nix ortamında çalıştırılabilir dosya yapmak için, dosyanın en başına aşağıdaki satır eklenir.
+    \begin{minted}[fontsize=\small]{python}
+        #!/usr/bin/env python
+    \end{minted}     
+    Son olarak:
+    \begin{minted}[fontsize=\small]{bash}
+        chmod +x hello
+        ./hello
+    \end{minted}      
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Objects}
+    Python'da her şey bir nesnedir. Bu nesneler kimliklerini belirten bir \alert{id} ve değerini tutan \alert{value} sahibidir.
+    \begin{minted}[fontsize=\small]{python}
+        sdu = 3.14159265538979323846
+        id(sdu)
+    \end{minted}    
+    Sahip oldukları değerler \alert{değiştirilebilir(mutable)} ve \alert{değiştirilemez(immutable)} olabilir.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Mutability}
+    \alert{Mutable} değerler Üzerinde değişiklik yaptığınızda \alert{id} değeri değişmez. Ancak \alert{Immutable} değerler üzerindeki değişiklikler \alert{id} değerini değiştirir.
+    \begin{minted}[fontsize=\small]{python}
+        sdu = 3.14159265538979323846
+        id(sdu)
+        sdu += 1.0
+        id(sdu)
+    \end{minted}      
+    
+    \begin{minted}[fontsize=\small]{python}
+        sepet = ["elma", "armut", "kiraz"]
+        id(sepet)
+        sepet.append('karpuz')
+        id(sepet)
+    \end{minted}     
+
+    \begin{minted}[fontsize=\small]{python}
+        en_buyuk = "besiktas"
+        id(en_buyuk)
+        en_buyuk += "tir"
+        id(en_buyuk)
+    \end{minted}       
+    
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Variables}    
+    Bir Çin atasözü der ki, \alert{güzel kod güzel değişken isminden belli olur}. Ayrıca bir Türk atasözü der ki, \alert{bana değişken adını söyle sana nasıl bir kod olduğunu söyleyim}.
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = 1                           
+        osman = 1.0                         
+        altan = "ohooneleryazilirburaya"
+        ceyda_osman_kemal = []              
+        ayse_ezgi_riza = {}                 
+    \end{minted}     
+\end{frame}    
+
+\plain{2 + 2}{\vspace{-3em}\begin{center}\includegraphics[width=\textwidth, height=3in]{images/math.png}\end{center}}
+
+\begin{frame}[fragile]
+\frametitle{Math}    
+    Matematiksel işlemler için diğer dillerden bilinen \alert{+, -, /, *} operatörleri aynen geçerlidir. Farklı olarak üs alma işlemi için \alert{**}  ve \alert{\%} vardır.
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = 5 + 6
+        ahmet += 2
+        ahmet = 3 * 5
+        ahmet = 2**5
+        ahmet = ahmet % 5
+        ahmet %= 5
+        ahmet *= 10
+    \end{minted}      
+\end{frame}  
+
+\begin{frame}[fragile]
+\frametitle{Deep Math}    
+    Tam sayı bölme işlemi diğer dillerde olduğu gibi karıştırılabilir.
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = 5 / 2
+        ahmet = 5 / 2.0
+        ahmet = 5.0 / 2
+    \end{minted}      
+    Tam sayı olarak bellekte tutulan en büyük değerin üstüne çıkarsanız, artık o sayıyı \alert{long} tipinde saklamaya başlarsınız.
+    \begin{minted}[fontsize=\small]{python}
+        import sys
+        ahmet = sys.maxint
+        type(ahmet)
+        ahmet += 1
+        type(ahmet)
+    \end{minted}         
+\end{frame} 
+
+\begin{frame}[fragile]
+\frametitle{Strings}    
+    Metinler karakter dizisi olarak tutulur. Python'da bu karakter dizileri \alert{str} tipindedir. Ayrıca stringler \alert{immutable} bir veri tipidir.
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = "iste bu bir string"
+        ahmet += "tir."
+    \end{minted}      
+    Python'da stringleri tek tırnak, çift tırnak veya üç tırnak ile yazabilirsiniz. Kullanım sebepleri çeşitli sorunlar ile karşılaşınca daha rahat anlaşılır.
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = "iste bu bir string"
+        ahmet = 'ama bu da bir string'
+        ahmet = """vallaha bu da string"""
+    \end{minted}    
+\end{frame} 
+
+\begin{frame}[fragile]
+\frametitle{Deep Strings}    
+    Stringler üzerinde çeşitli formatlama işlemleri yapılabilir.
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = "%s %s" %('bu bir', 'string')
+        ahmet = "{0} {1}".format('bu bir', 'string')
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{iPython}    
+    Veri tiplerinin hangi metodlara sahip olduğunu ezberlemenize gerek yok. Python içerisinde tanımlı gelen \alert{help, dir} fonksiyonları size yardımcı olacaktır.
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = "bu string"
+        melda = 3.14159165538979323846
+        dir(ahmet)
+        dir(melda)
+        help(ahmet.upper)
+        help(ahmet.title)
+        help(melda.hex)
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Dunder Methods}    
+    \alert{dir} komutunu kullandığınız zaman iki tane alt çizgi ile başlayan(double underscore, dunder) metodlar olduğunu da göreceksiniz. Onlar normalde doğrudan kullanmayacağınız ancak başka bir nesne ile etkileşime girdiğinde kullanacağınız metodlardır.
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = 2
+        melda = 3
+        ceyda = ahmet.__add__(melda)
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Comments}    
+    Python'da yorumlar \alert{\#} ile başlar. C'de olduğu gibi bir kerede çok satır içeren yorum satırını doğrudan oluşturmakta kullanılmaz. Ancak o amaç için yapılmış başka bir yorum türü vardır.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Data Types}    
+    Python'da ilerlemenin en temel şartı sahip olduğu veri tiplerine hakim olmaktır.
+    
+    NoneType:
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = None
+    \end{minted}  
+    
+    Boolean:
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = True
+        melda = False
+    \end{minted}     
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Comparison}    
+    Python içerisinde veri tiplerini kıyaslamak için \alert{>, <, >=, <=, ==, !=} operatörlerini kullanabilirsiniz.
+
+    \begin{minted}[fontsize=\small]{python}
+        "ahmet" > "mehmet"
+        "ahmet" == "ahmet"
+        546 != 457
+        x = 3.14159265538979323846
+        2 < x < 5
+        isinstance(x, float)
+        isinstance("ahmet", str)
+    \end{minted}     
+    
+    Mantıksal işlemler için \alert{and} ve \alert{or} kullanılır.
+    
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Sequences}    
+    Farklı tür verileri birarada tutmak için Python \alert{liste(list), sözlük(dict), küme(set)} ve \alert{demet(tuple)} veri tiplerine sahiptir.
+    
+    \begin{minted}[fontsize=\small]{python}
+        meyveler = ["elma", "armut"]
+        elma = list("elma")
+    \end{minted}  
+
+    \begin{minted}[fontsize=\small]{python}
+        meyveler = {"elma": "kirmizi", "armut": "sari"}
+        meyveler = dict()
+    \end{minted} 
+
+    \begin{minted}[fontsize=\small]{python}
+        meyveler = {"elma", "armut", "kiraz", "elma"}
+        meyveler = set()
+    \end{minted}     
+
+    \begin{minted}[fontsize=\small]{python}
+        meyveler = ("elma", )
+        meyveler = ("elma", "armut")
+        meyveler = tuple()
+    \end{minted}         
+    
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Dict}    
+    Python sözlükleri veri yapısı olarak \alert{hashmap} veya \alert{ilişkili dizi} olarak da bilinir.
+    \begin{minted}[fontsize=\small]{python}
+        meyveler = {"elma": "kirmizi", "armut": "sari"}
+        meyveler["elma"] = "yesil"
+    \end{minted} 
+    \alert{in} ifadesi nesnenin \alert{\_\_contains\_\_} metodunu kullanmaktadır.
+    \begin{minted}[fontsize=\small]{python}
+        print "armut" in meyveler
+        print "kiraz" in meyveler
+    \end{minted}     
+    \alert{get} metodu ile erişim yapılabilir ayrıca \alert{del} metodu ile de silinebilir.
+    \begin{minted}[fontsize=\small]{python}
+        meyveler["kiraz"]
+        meyveler.get("kiraz", "yok ki")
+        del meyveler["kiraz"]
+    \end{minted}        
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Sample Operations}    
+    \begin{minted}[fontsize=\small]{python}
+        ahmet = "hihahoo"
+        meyveler = ["elma", "kiraz", "armut"]
+        turgut = "elma,kiraz,armut"
+        print ahmet[0]
+        print ahmet[-1]
+        print meyveler[0:1]
+        print meyveler[:1]
+        print meyveler[:-1]
+        print meyveler[::-1]
+        print ahmet[::-1]
+        print len(ahmet)
+        print turgut.split(',')
+        print len(turgut.split(',')) ==  len(meyveler)
+        ahmet.sort()
+        print ahmet.sorted() 
+        elma, kiraz, armut = meyveler
+    \end{minted}     
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Control Flow}    
+    \begin{minted}[fontsize=\small]{python}
+        x = int(raw_input("gir bakim: "))
+        if x < 0:
+            print "negatif"
+        elif x < 10:
+            print "0 ile 10 arasinda"
+        else:
+            print "ne bicim sayi bu?"
+    \end{minted}     
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Loop}    
+    For:
+    \begin{minted}[fontsize=\small]{python}
+        meyveler = ["elma", "armut", "kiraz", "muz"]
+        for meyve in meyveler:
+            print meyve, len(meyve)
+    \end{minted}   
+    While:
+    \begin{minted}[fontsize=\small]{python}
+        meyveler = ["elma", "armut", "kiraz", "muz"]
+        i = 0
+        while i < len(meyveler):
+            print meyveler[i], len(meyveler[i])
+    \end{minted}    
+    Diğer dillerde olan \alert{break} ve \alert{continue} deyimleri Python içerisinde de vardır.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Iteration}    
+    \begin{minted}[fontsize=\small]{python}
+        sayilar = [2, 3, 1, 5, -6, 7, -8, -2, -1]
+        for sayi in sayilar:
+            if sayi < 0:
+                break
+    \end{minted}   
+
+    \begin{minted}[fontsize=\small]{python}
+        for sayi in sayilar:
+            if sayi < 0:
+                continue
+    \end{minted} 
+    
+    \begin{minted}[fontsize=\small]{python}
+        for sayi in range(100):
+            pass
+    \end{minted} 
+    
+    \begin{minted}[fontsize=\small]{python}
+        for mk in meyveler.keys():
+            ...
+        for mv in meyveler.values():
+            ...
+        for mi in meyveler.items():
+            ...
+    \end{minted}     
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Functions}    
+    Python'da fonksiyonları \alert{def} deyimi ile birlikte tanımlarız. Dikkat edilmesi gereken en önemli nokta \alert{4 boşluk} bırakılıp bırakılmadığıdır. Ayrıca fonksiyonların ilk satırı \alert{docstring} olarak isimlendirilir. Buraya yazdıklarınız \alert{help} metodu ile okunabilir.
+    \begin{minted}[fontsize=\small]{python}
+        def ekranci():
+            """ ekrana acayip seyler basar """
+            print "acayip bisi"
+        
+        def eklemeci(a, b, c, d, e=23):
+            """ verdigin her seyi ekler birbirine """
+            return a + b + c + d + e
+        
+        ekranci()
+        eklemeci(1, 2, 3)
+        eklemeci(1, 2, 3, 4)
+    \end{minted}     
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Comprehensions}    
+    \noindent\hspace{-10in}
+    \begin{minted}[fontsize=\small]{python}
+        l = "elma armut kiraz karpuz muz"
+        t_m = [m for m in l.split()  if len(m) > 3]
+        t_s = [[m.upper(), m.lower(), len(m)] \ 
+            for m in l.split()]
+        t_l = [s for s in range(0, 100) if s % 2]
+        t_k = {s for s in range(0, 100) if s % 2} 
+        i_s = {s:s+1 for s in range(0, 100)  if s % 2} 
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Functionality}    
+    \begin{minted}[fontsize=\small]{python}
+        tek_mi = lambda x: x % 2 == 1
+        arttirsana = lambda x: x + 1
+        sayilar = ["1", "532", "45", "12356"]
+        sayilar = map(int, sayilar)
+        sayilar = map(lambda x: x + 1, sayilar)
+        sayilar_b = map(lambda x: x % 2 == 1, sayilar)
+        sayilar_t = filter(lambda x: x % 2 == 1, sayilar)
+        toplam = reduce(lambda x, y: x+ y, range(10))
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Modularity}    
+    Aslında her Python kodu içeren dosya bir modüldür. Modüller içerisinde fonksiyon, sınıf tanımlamaları ile çalıştırılabilir satırlar yer alır. Her modül sadece \alert{import} edildiğinde çalıştırılır. Modüller içerisinde \alert{private} sembol tabloları da bulunur.
+    \begin{minted}[fontsize=\small]{python}
+        import modul
+        modul.fonksiyon()
+        modul.__name__
+        fonksiyon = modul.fonksiyon()
+        fonksiyon()
+        from modul import fonksiyon1, fonksiyon2
+        fonksiyon1()
+        fonksiyon2()
+        from modul import *
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Classes}    
+    \begin{minted}[fontsize=\small]{python}
+        class Hayvan(object):
+            """ Hayvan sinifi """
+            def __init__(self, isim):
+                """ Yapici metodumuz """
+                self.isim = isim
+            def konus(self):
+                """ Konusturan metodumuz """
+                print "Ben hayvanim: ", self.isim
+        
+        sari_kiz = Hayvan("sari kiz")
+        prenses = Hayvan("prenses")
+        
+        sari_kiz.konus()
+        prenses.konus()
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{SubClasses}    
+    \begin{minted}[fontsize=\small]{python}
+        class Okuz(Hayvan):
+            def konus(self):
+                """ Konusturan metodumuz """
+                print "Ben okuzum: ", self.isim
+        
+        sari_kiz = Okuz("sari kiz")
+        sari_kiz.konus()
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{IO}    
+    \begin{minted}[fontsize=\small]{python}
+        dosya = open("dosya.txt", "r")
+        for satir in dosya:
+            print satir
+        dosya.close()
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        dosya = open("dosya.txt", "w")
+        dosya.write("yaz beni")
+        dosya.close()
+    \end{minted}   
+
+    \begin{minted}[fontsize=\small]{python}
+        yazdigin = raw_input("Yaz bakim: ")
+    \end{minted}  
+
+    \begin{minted}[fontsize=\small]{python}
+        import sys
+        print sys.argv
+    \end{minted}       
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Exceptions}    
+    \begin{minted}[fontsize=\small]{python}
+        try:
+            lay_lay_lom = 123456 / 0
+        except ZeroDivisionError:
+            print "oha 0'a bolmeye calistin oha!"
+        else:
+            print "yok ya 0'a bolmedi"
+    \end{minted}
+
+    \begin{minted}[fontsize=\small]{python}
+        ...
+        def cok_iyi_fonksiyon(a, b):
+            if b != 0:
+                return a/b
+            else:
+                raise CokIlgincHata
+        ...
+    \end{minted}    
+    
+\end{frame}
+
+\section{Pythonic}
+
+\begin{frame}[fragile]
+\frametitle{The Zen of Python}    
+    \begin{minted}[fontsize=\small]{python}
+        import this
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Swap}    
+    \begin{minted}[fontsize=\small]{python}
+        temp = ahmet
+        ahmet = mehmet
+        mehmet = temp
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        ahmet, mehmet = mehmet, ahmet
+    \end{minted}    
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Get}    
+    \begin{minted}[fontsize=\small]{python}
+        sonuc = None
+        if 'dizin' in ayarlar:
+            sonuc = ayarlar['dizin']
+        else:
+            sonuc = on_tanimli
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        sonuc = ayarlar.get('dizin', on_tanimli)
+    \end{minted}    
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Join}    
+    \begin{minted}[fontsize=\small]{python}
+        sonuc_listesi = ["True", "False", "Yok"]
+        sonuc_stringi = ""
+        for sonuc in sonuc_listesi:
+            sonuc_stringi += sonuc
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        sonuc_listesi = ["True", "False", "Yok"]
+        sonuc_stringi = "".join(sonuc_listesi)
+    \end{minted}    
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{With}    
+    \begin{minted}[fontsize=\small]{python}
+        dosya = open("dosya.txt", "r")
+        for satir in dosya:
+            uber_sonik_islem(satir)
+        dosya.close()
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        with open("dosya.txt", "r") as dosya:
+            for satir in dosya:
+                uber_sonik_islem(satir)
+    \end{minted} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{If}    
+    \begin{minted}[fontsize=\small]{python}
+        if i == "S" or i == "D" or i == "U":
+            uber_sonik_islem()
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        if i in ("S", "D", "U"):
+            uber_sonik_islem()
+    \end{minted} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Filter}    
+    \begin{minted}[fontsize=\small]{python}
+        ss = range(1, 100)
+        l = []
+        for s in ss:
+            if asal_mi(s):
+                l.append(s+5)
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        ss = range(1, 100)
+        l = [s+5 for s in ss if asal_mi(ss)]
+    \end{minted} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Enumerate}    
+    \begin{minted}[fontsize=\small]{python}
+        i = 0
+        for eleman in listem:
+            print i, eleman
+            i += 1
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        for i, eleman in enumerate(listem):
+            print i, eleman
+    \end{minted} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Generators}    
+    \begin{minted}[fontsize=\small]{python}
+        def liste_olusturucu(arg):
+            listem = []
+            for i in uber_sonik_islem(arg):
+                listem.append(i)
+            return listem
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        def liste_olusturucu(arg):
+            for i in uber_sonik_islem(arg):
+                yield i
+    \end{minted} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Map}    
+    \begin{minted}[fontsize=\small]{python}
+        sayilar = [1, 5, 2, 4, 3]
+        for i in range(len(sayilar)):
+            sayilar[i] += 3
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        map(lambda x: x+3, sayilar)
+    \end{minted} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Reduce}    
+    \begin{minted}[fontsize=\small]{python}
+        toplam = 10
+        for i in (1, 2, 3):
+            toplam = toplam ** i
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        reduce(lambda x, y: x**y, [1, 2, 3], 10)
+    \end{minted} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Filter}    
+    \begin{minted}[fontsize=\small]{python}
+        sayilar = [5, 6, 3, 4, 7, 9, 1]
+        yeni_sayilar = []
+        for i in range(len(sayilar)):
+            if sayilar[i] % 2 == 0:
+                yeni_sayilar.append(sayilar[i])
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        filter(lambda x: x%2 == 0, sayilar)
+    \end{minted} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Comprehensions}    
+    \begin{minted}[fontsize=\small]{python}
+        map(lambda x: x+3, listem)
+        [i+3 for i in listem]
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        filter(lambda x: x%2 == 0, listem)
+        [i for i in listem if i % 2 == 0]
+    \end{minted} 
+\end{frame}
+
+\section{Libraries}
+
+\begin{frame}[fragile]
+\frametitle{Itertools}    
+    \begin{minted}[fontsize=\small]{python}
+        import itertools
+        
+        itertools.count(10, 1)
+        itertools.count(10, 2)
+        
+        itertools.cycle("ABCD")
+        
+        itertools.repeat(10, 3)
+        
+        itertools.chain(l1, l2, ...)
+        
+        itertools.compress("ABCDE", [1, 0, 0, 1])
+        
+        itertools.product("ABCDE", repeat=2)
+        itertools.product("ABCDE", repeat=3)
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Collections}    
+    \begin{minted}[fontsize=\small]{python}
+        import collections
+        
+        meyveler = collections.deque()
+        meyveler.append("elma")
+        meyveler.append("armut")
+        
+        sayac = collections.Counter(buyuk_metin)
+        sayac.most_common()
+        
+        ilginc_sozluk = collections.defaultdict(int)
+        ilginc_sozluk['aboo'] += 50
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Deque}    
+    \begin{minted}[fontsize=\small]{python}
+        meyveler = collections.deque()
+        %timeit meyveler.appendleft("elma")
+        
+        meyveler = []
+        %timeit meyveler.insert("elma", 0)
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Requests}    
+    \begin{minted}[fontsize=\small]{bash}
+        pip install requests
+    \end{minted}
+    
+    \begin{minted}[fontsize=\small]{python}
+        import requests
+        istek = requests.get("http://blabla.com")
+        istek.text
+        istek.headers
+        istek.status_code
+        istek.ok
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Word Counter}    
+    \begin{minted}[fontsize=\small]{python}
+        import re
+        import requests
+        from collections import Counter
+        metin = requests.get("http://blabla.com").text
+        kelimeler = re.findall('\w+', metin.lower())
+        sayac = Counter(kelimeler).most_common(10)
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Default List}    
+    \begin{minted}[fontsize=\small]{python}
+        import collections
+        meyveler = \
+            [('elma', 1), ('kiraz', 2), \
+            ('elma', 3), ('armut', 1), ('karpuz', 4)]
+        duzgun_liste = collections.defaultdict(list)
+        for anahtar, deger in meyveler:
+            duzgun_liste[anahtar].append(deger)
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Functools}    
+    \begin{minted}[fontsize=\small]{python}
+        import functools
+        ikili = int("1010")
+        onlu = int("1010", base=2)
+        ikili_yap = functools.partial(int, base=2)
+        ikili_yap("1010")
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Debugging}    
+    \begin{minted}[fontsize=\small]{python}
+        import pdb
+        pdb.set_trace()
+    \end{minted}
+    \begin{description}
+        \item[h] help
+        \item[s] step into
+        \item[n] next
+        \item[c] continue
+        \item[w] where
+        \item[l] list
+    \end{description}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Config Read}    
+    \begin{minted}[fontsize=\small]{bash}
+        [genel_ayarlar]
+        site_adi = http://www.google.com
+        kullanici_adi = root
+        parola = g00gl3
+    \end{minted}
+    \begin{minted}[fontsize=\small]{python}
+        okuyucu = SafeConfigParser()
+        okuyucu.read('ayarlar.conf')
+        
+        print okuyucu.get('genel_ayarlar', 'site_adi')
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Logging}    
+    \begin{minted}[fontsize=\small]{python}
+        import logging
+        LOG_DOSYASI = "logcu.out"
+        logging.basicConfig(filename=LOG_DOSYASI, 
+                            level=logging.DEBUG)
+        logging.debug("neler oldu neler")
+    \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Simple Web}    
+    \begin{minted}[fontsize=\small]{python}
+        from bottle import route, run, template
+        
+        @route('/selam/<isim>')
+        def index(isim):
+            cevap = '<b>Merhaba {{isim}}</b>!'
+            return template(cevap, isim=isim)
+        
+        run(host='localhost', port=8080)
+    \end{minted}
+\end{frame}
+
+\begin{frame}{Summary}
+
+  Egitim slaytlarına ve kaynak kodlara aşağıdaki linkten erişebilirsiniz
+
+  \begin{center}\url{github.com/halitalptekin/sdu-workshop}\end{center}
+
+\end{frame}
+
+\plain{}{Sorular?}
+
+\end{document}
